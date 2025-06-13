@@ -9,7 +9,7 @@ const Layout = () => {
             <main className="App">
                 <Outlet/>
             </main>
-            <footer>Poo ltd</footer>
+            <footer>Harry Larke 2025</footer>
         </div>
     )
 }
