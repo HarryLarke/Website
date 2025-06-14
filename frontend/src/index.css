@@ -1,68 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --BLACK: #000000;
+  --WHITE: #FFFFFF;
+  --GREY: #CCCCCC;
+  --DARKGRAY: #5b5b5b;
+  --LIGHTGRAY: #e4e0e0;
+  --LIGHTBLUE: #83AECF;
+  --DAKBLUE: #033BF7;
+  --BLUE: #4872fb;
+  --RED: #FD0E06;
+  --YELLOW: #FEE100;
+  --GREEN: #1FB908;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  --BACKGROUND:   --WHITE/* linear-gradient(-135deg, #001b74, var(--LIGHTBLUE)) */;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
 }
-a:hover {
-  color: #535bf2;
+
+html {
+  height: 100%;
+  width: 100%;
+  background: var(--BACKGROUND);
+
+  display: flex;
+  justify-content: center
+  ;
+
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 70%;
+  height: 100vh;
+
+  border: solid 5px var(--BLUE);
+  border-radius: 3px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--DAKBLUE);
+  border-radius: 3px;
+}
+
+
+main {
+  height: 800px;
+  background-color: var(--GREY);
+  border: solid var(--BLACK) 2px;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+link {
+  cursor: pointer;
+}
+/* will need to change font sizing  */
+h1 {
+  color: var(--WHITE);
+  font-weight: 900;
+  font-size: 3rem 
+}
+
+/* COMPONENTS */
+
+.header-buttons {
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--DAKBLUE);
+  border: var(--WHITE) solid 2px;
+  border-radius: 2px;
+  color: var(--WHITE)
+}
+
+.header-button-close {
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--RED);
+  border: var(--WHITE) solid 2px;
+  color: var(--WHITE)
+}
+
+.header-link {
+  width: 100px;
+  height: 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: solid var(--BLACK) 2px;
+  border-radius: 3px;
+  color: var(--BLACK);
+  text-decoration: none;
+  font-weight: 700;
+
+  background-color: var(--GREY);
+  box-shadow: 3px -2px 5px var(--DARKGRAY)
+
+}
+
+/* CONTAINERS */
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.links-container {
+  width: 100%;
+  min-height: 40px;
+  max-height: 60px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+
+  gap: 0.2rem;
+
+
+  background-color: var(--LIGHTGRAY);
+
+}
+
+.header-button-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  width: 200px;
 }

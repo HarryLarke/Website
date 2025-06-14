@@ -4,13 +4,13 @@ import Header from "../components/Header";
 
 const Layout = () => {
     return(
-        <div className="Body">
+        <body>
             <Header/>
             <main className="App">
                 <Outlet/>
             </main>
             <footer>Harry Larke 2025</footer>
-        </div>
+        </body>
     )
 }
 
