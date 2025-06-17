@@ -26,7 +26,7 @@ const ContactMe = () => {
     }
 
     return(
-        <>
+        <main>
             <section>
                 <h2>Contact Me</h2>
                 <p>If you are interested in working with me, whether that be freelance or fulltime employee.</p>
@@ -66,7 +66,7 @@ const ContactMe = () => {
                     >Send</button>
                 </form>
             </section>
-        </>
+        </main>
     )
 }
 

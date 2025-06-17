@@ -6,9 +6,7 @@ const Layout = () => {
     return(
         <body>
             <Header/>
-            <main className="App">
-                <Outlet/>
-            </main>
+            <Outlet/>
             <footer>Harry Larke 2025</footer>
         </body>
     )

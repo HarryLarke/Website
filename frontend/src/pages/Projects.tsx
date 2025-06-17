@@ -2,7 +2,7 @@
 const Projects = () => {
 
     return(
-        <>
+        <main>
             <section>
                 <h2>Projects:</h2> 
                 <p>Here is my fullstack and scalable applications:</p>
@@ -14,7 +14,7 @@ const Projects = () => {
                 <p>The current projects I'm working on:</p>
                 
             </section>
-        </>
+        </main>
     )
 }
 

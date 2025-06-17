@@ -57,7 +57,6 @@ header {
 
 
 main {
-  height: 800px;
   background-color: var(--GREY);
   border: solid var(--BLACK) 2px;
 }
@@ -74,6 +73,23 @@ h1 {
   color: var(--WHITE);
   font-weight: 900;
   font-size: 3rem 
+}
+
+/* PAGES */ 
+
+.Home {
+  display: grid;
+  grid-template-areas:   
+    "Head Head . ."
+    "AboutMe AboutMe  Img Img"
+    "AboutMe AboutMe Img Img"
+    "Cert Cert Cert .";
+
+  padding: 1rem;
+  gap: 0.5rem;
+  background-color: var(--GREY);
+  border: solid var(--BLACK) 2px;
+
 }
 
 /* COMPONENTS */
@@ -97,6 +113,16 @@ h1 {
   color: var(--WHITE)
 }
 
+.top-buttons {
+  width: 20px;
+  height: 20px;
+
+  background-color: var(--GRAY);
+  border: var(--WHITE) solid 2px;
+  border-radius: 2px;
+  color: var(--WHITE)
+}
+
 .header-link {
   width: 100px;
   height: 35px;
@@ -113,7 +139,64 @@ h1 {
 
   background-color: var(--GREY);
   box-shadow: 3px -2px 5px var(--DARKGRAY)
+}
 
+.title-two {
+  grid-area: Head;
+  font-size: 2.5rem;
+  padding-left: 0.5rem;
+  background-color: var(--GRAY);
+  border-radius: 4px;
+  box-shadow: 3px -2px 5px var(--DARKGRAY)
+}
+
+.title-three {
+  font-size: 1.5rem;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  background-color: var(--DARKGRAY);
+  width: 100%;
+  height: 25px;
+  cursor: move;
+}
+
+.textarea-one {
+  grid-area: AboutMe;
+  
+  border: solid 3px var(--DARKGRAY);
+  border-radius: 3px;
+  gap: 1rem;
+}
+
+.img-one {
+  grid-area: Img;
+  width: 350px;
+  height: 400px;
+  
+  border: solid 3px var(--DARKGRAY);
+  border-radius: 3px;
+  gap: 1rem;
+  background:  linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);;
+}
+
+.textarea-two {
+  grid-area: Cert;
+  border: solid 3px var(--DARKGRAY);
+  border-radius: 3px;
+  gap: 1rem;
+
+  height: 200px;
+}
+
+.art-one {
+  padding: 0.5rem;
+  font-size: 1.2rem;
 }
 
 /* CONTAINERS */
@@ -149,3 +232,6 @@ h1 {
   padding: 1rem;
   width: 200px;
 }
+
+/* GRIDS */
+
