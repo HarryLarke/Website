@@ -63,6 +63,16 @@ main {
 
 button {
   cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  scale: 110%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--BLACK);
 }
 
 link {
@@ -75,15 +85,19 @@ h1 {
   font-size: 3rem 
 }
 
+h4 {
+  text-decoration: underline;
+}
+
 /* PAGES */ 
 
 .Home {
   display: grid;
   grid-template-areas:   
     "Head Head . ."
-    "AboutMe AboutMe  Img Img"
-    "AboutMe AboutMe Img Img"
-    "Cert Cert Cert .";
+    "TxtOne TxtOne  Img Img"
+    "TxtOne TxtOne Img Img"
+    "TxtTwo TxtTwo TxtTwo .";
 
   padding: 1rem;
   gap: 0.5rem;
@@ -91,6 +105,21 @@ h1 {
   border: solid var(--BLACK) 2px;
 
 }
+
+.Projects {
+  display: grid;
+  grid-template-areas: 
+    "Head Head . "
+    "TxtOne TxtOne TxtOne"
+    "TxtTwo TxtTwo TxtTwo"
+    "TxtThree TxtThree TxtThree"
+  ; 
+
+  padding: 1rem;
+  gap: 0.5rem;
+  background-color: var(--GREY);
+  border: solid var(--BLACK) 2px;
+} 
 
 /* COMPONENTS */
 
@@ -124,7 +153,7 @@ h1 {
 }
 
 .header-link {
-  width: 100px;
+  width: 150px;
   height: 35px;
 
   display: flex;
@@ -137,6 +166,7 @@ h1 {
   text-decoration: none;
   font-weight: 700;
 
+  font-size: 1.2rem;
   background-color: var(--GREY);
   box-shadow: 3px -2px 5px var(--DARKGRAY)
 }
@@ -152,6 +182,23 @@ h1 {
 
 .title-three {
   font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.project-box {
+  width: 200px;
+  height: 150px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border: dashed 3px var(--BLACK);
+  border-radius: 4px;
+
 }
 
 .top {
@@ -167,7 +214,7 @@ h1 {
 }
 
 .textarea-one {
-  grid-area: AboutMe;
+  grid-area: TxtOne;
   
   border: solid 3px var(--DARKGRAY);
   border-radius: 3px;
@@ -186,17 +233,36 @@ h1 {
 }
 
 .textarea-two {
-  grid-area: Cert;
+  grid-area: TxtTwo;
   border: solid 3px var(--DARKGRAY);
   border-radius: 3px;
   gap: 1rem;
 
-  height: 200px;
+}
+
+.textarea-three {
+  grid-area: TxtThree;
+  border: solid 3px var(--YELLOW);
+  border-radius: 3px;
+  gap: 1rem;
+
 }
 
 .art-one {
   padding: 0.5rem;
   font-size: 1.2rem;
+}
+
+.art-two {
+  padding: 0.5rem;
+  gap: 05rem;
+
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction:  row;
+
 }
 
 /* CONTAINERS */
