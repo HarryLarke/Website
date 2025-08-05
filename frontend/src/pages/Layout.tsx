@@ -2,13 +2,15 @@ import { Outlet } from "react-router";
 
 import Header from "../components/Header";
 
+const footerText = "- - Harry_λ(Larke) 2025 - -"
+
 const Layout = () => {
     return(
-        <body>
+        <div className="body">
             <Header/>
             <Outlet/>
-            <footer>Harry Larke 2025</footer>
-        </body>
+            <footer>{footerText}</footer>
+        </div>
     )
 }
 
