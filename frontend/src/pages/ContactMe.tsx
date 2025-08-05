@@ -1,6 +1,6 @@
 import api from "../api/api"
 import { isAxiosError } from "axios"
-import { useState, type FormEvent } from "react"
+import { useEffect, useState, type FormEvent } from "react"
 
 const ContactMe = () => {
     
@@ -12,6 +12,7 @@ const ContactMe = () => {
     const [ errorMessage, setErrorMessage ] = useState("")
     const [ errorStatus, setErrorStatus ] = useState("")
 
+    const [ wakeUpCount, setWakeUpCount ] = useState(0)
     const [ hideForm, setHideForm ] = useState(false)
     const [ expandForm, setExpandForm ] = useState(false)
     const [ isSending, setIsSending ] = useState(false) 
@@ -29,6 +30,27 @@ const ContactMe = () => {
 
     const progress = [name, email, message].filter(value => value.trim() !== "").length
     console.log(progress)
+
+    //when forms starts to be filled in then function of wake begins...
+
+    useEffect(() => {
+        if(wakeUpCount === 0) {
+        handleWakeUp()}}, [name, email, subject, message])
+
+    const handleWakeUp = async () => {
+        try{
+            console.log('sending wakeUp!')
+            setWakeUpCount(1)
+            await api.post('/hello', JSON.stringify({hello: 'hello'}),
+              {headers: {'Content-Type': 'application/json'}})
+            
+
+        } catch(err) {
+            if(isAxiosError(err)){
+                console.log(err.message)
+            }
+        }
+    }
 
     const handleSubmit = async(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
