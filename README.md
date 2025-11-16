@@ -1,4 +1,6 @@
-Hello! 
+To access the frontend: <a href="https://github.com/HarryLarke/Webpage">Webpage</a>
+To access the backend: <a href="https://github.com/HarryLarke/webpage-server">Server</a>
+
 
 Here is the source code for my website. As you can see it also runs a backend too. 
 The server is used to handle the contactMe queries. 
